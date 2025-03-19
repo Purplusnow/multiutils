@@ -5,7 +5,8 @@ body {
 }
 
 .calculator {
-    width: 300px;
+    width: 90%;
+    max-width: 350px;
     margin: 50px auto;
     padding: 20px;
     background: white;
@@ -22,6 +23,7 @@ body {
     border: none;
     background: #eee;
     border-radius: 5px;
+    overflow-x: auto;
 }
 
 .buttons {
@@ -32,12 +34,13 @@ body {
 }
 
 button {
-    padding: 15px;
+    padding: 12px;
     font-size: 1.2em;
     border: none;
     background: #ddd;
     border-radius: 5px;
     cursor: pointer;
+    width: 100%;
 }
 
 button:hover {
