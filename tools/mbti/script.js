@@ -22,7 +22,9 @@ function loadStory() {
     document.getElementById("choice2").textContent = stories[currentStory].choices[1];
 
     // 진행률 표시 업데이트
-    document.getElementById("progress").textContent = `질문 ${currentStory + 1} / 28`;
+    let progressPercent = ((currentStory + 1) / 28) * 100;
+    document.getElementById("progress-text").textContent = `질문 ${currentStory + 1} / 28`;
+    document.getElementById("progress-bar").style.width = progressPercent + "%";
 }
 
 function showResult() {
@@ -32,6 +34,7 @@ function showResult() {
                (scores.J >= scores.P ? "J" : "P");
 
     document.getElementById("story-container").style.display = "none";
+    document.getElementById("progress-container").style.display = "none";
     document.getElementById("result-container").innerHTML = `<h2>당신의 MBTI 유형: ${mbti}</h2>`;
     document.getElementById("result-container").style.display = "block";
 }
