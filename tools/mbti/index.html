@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스토리 기반 MBTI 테스트</title>
+    <link rel="stylesheet" href="style.css?v={int(datetime.now().timestamp())}">
+    <script defer src="script.js?v={int(datetime.now().timestamp())}"></script>
+</head>
+<body>
+    <div class="mbti-container">
+        <h1>MBTI 스토리 테스트</h1>
+        <div id="story-container">
+            <p id="story-text"></p>
+            <button id="choice1" onclick="nextStory(0)"></button>
+            <button id="choice2" onclick="nextStory(1)"></button>
+        </div>
+        <div id="result-container" style="display:none;"></div>
+    </div>
+    <br>
+    <a href="../../index.html">메인 페이지로 돌아가기</a>
+</body>
+</html>
