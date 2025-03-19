@@ -3,47 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>공학용 계산기</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <title>기본 계산기</title>
+    <link rel="stylesheet" href="style.css?v={int(datetime.now().timestamp())}">
+    <script defer src="script.js?v={int(datetime.now().timestamp())}"></script>
 </head>
 <body>
     <div class="calculator">
         <input type="text" id="display" readonly>
         <div class="buttons">
             <button onclick="clearDisplay()">C</button>
-            <button onclick="appendOperator('(')">(</button>
-            <button onclick="appendOperator(')')">)</button>
             <button onclick="appendOperator('/')">÷</button>
-            
+            <button onclick="appendOperator('*')">×</button>
+            <button onclick="deleteLast()">⌫</button>
+
             <button onclick="appendNumber(7)">7</button>
             <button onclick="appendNumber(8)">8</button>
             <button onclick="appendNumber(9)">9</button>
-            <button onclick="appendOperator('*')">×</button>
+            <button onclick="appendOperator('-')">−</button>
 
             <button onclick="appendNumber(4)">4</button>
             <button onclick="appendNumber(5)">5</button>
             <button onclick="appendNumber(6)">6</button>
-            <button onclick="appendOperator('-')">−</button>
+            <button onclick="appendOperator('+')">+</button>
 
             <button onclick="appendNumber(1)">1</button>
             <button onclick="appendNumber(2)">2</button>
             <button onclick="appendNumber(3)">3</button>
-            <button onclick="appendOperator('+')">+</button>
+            <button onclick="calculateResult()">=</button>
 
             <button onclick="appendNumber(0)">0</button>
             <button onclick="appendOperator('.')">.</button>
-            <button onclick="calculateResult()">=</button>
-
-            <button onclick="appendFunction('Math.sin(')">sin</button>
-            <button onclick="appendFunction('Math.cos(')">cos</button>
-            <button onclick="appendFunction('Math.tan(')">tan</button>
-            <button onclick="appendFunction('Math.log(')">log</button>
-
-            <button onclick="appendFunction('Math.sqrt(')">√</button>
-            <button onclick="appendFunction('Math.pow(')">xʸ</button>
-            <button onclick="appendFunction('Math.exp(')">e^x</button>
-            <button onclick="appendFunction('Math.PI')">π</button>
         </div>
         <br>
         <a href="../../index.html">메인 페이지로 돌아가기</a>
