@@ -20,6 +20,9 @@ function loadStory() {
     document.getElementById("story-text").textContent = stories[currentStory].text;
     document.getElementById("choice1").textContent = stories[currentStory].choices[0];
     document.getElementById("choice2").textContent = stories[currentStory].choices[1];
+
+    // 진행률 표시 업데이트
+    document.getElementById("progress").textContent = `질문 ${currentStory + 1} / 28`;
 }
 
 function showResult() {
